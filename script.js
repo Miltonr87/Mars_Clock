@@ -11,13 +11,8 @@ function loading() {
     var img = window.document.getElementById("image");
     var date = new Date();
     var hour = date.getHours(date.setHours(-12));
-    var minutes = date.getMinutes();
-    var seconds = date.getSeconds();
-    minutes = checkTime(minutes);
-    seconds = checkTime(seconds);
 
-    msg.innerHTML = `Now it's <strong> ${hour}:${minutes}:${seconds} </strong> on Mars`;
-    var time = setTimeout(loading, 500);
+    msg.innerHTML = `Now it's <strong> ${hour}h </strong> on Mars`;
 
     if (hour >= 0 && hour < 12) {
         img.src = "./images/mars1.png" // Good Morning!! 
@@ -31,9 +26,10 @@ function loading() {
         img.src = "./images/mars3.png";  // Good Night!!
         document.body.style.background = "#252338";
     }
-
-
+    
 }
+
+
 
 
 
